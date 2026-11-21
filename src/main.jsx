@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { AnimatePresence, MotionConfig, motion, useReducedMotion } from 'motion/react'
-import { ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight, Camera, ClipboardList, Dumbbell, Menu, Plus, ScanLine, TrendingUp, UserRound, X } from 'lucide-react'
+import { ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight, Camera, Check, ClipboardList, Dumbbell, Menu, Plus, ScanLine, TrendingUp, UserRound, X } from 'lucide-react'
 import '@fontsource/barlow-condensed/latin-700.css'
 import '@fontsource/barlow-condensed/latin-800.css'
 import '@fontsource-variable/inter/wght.css'
@@ -9,7 +9,7 @@ import { site, whatsappUrl } from './site'
 import Application from './Application'
 import './styles.css'
 
-const links = [['Home', 'home'], ['About', 'about'], ['Coaching', 'coaching'], ['How It Works', 'process'], ['FAQ', 'faq']]
+const links = [['Home', 'home'], ['About', 'about'], ['Coaching', 'coaching'], ['Rehab & Mobility', 'mobility'], ['How It Works', 'process'], ['FAQ', 'faq']]
 const steps = [
   { name: 'Apply', copy: 'Share your goals, training experience, and what you’d like to change.', Icon: ClipboardList },
   { name: 'Assess', copy: 'We discuss your schedule, equipment, preferences, and starting point.', Icon: ScanLine },
@@ -114,6 +114,25 @@ function Coaching({ select }) {
   </section>
 }
 
+function Mobility({ select }) {
+  const { mobility } = site
+  return <section className="section mobility" id="mobility" tabIndex={-1}>
+    <div className="wrap mobility-grid">
+      <Photo className="mobility-photo" image={mobility.photo} />
+      <Reveal>
+        <p className="eyebrow">{mobility.name.toUpperCase()}</p>
+        <h2>MOVE BETTER.<br /><em>BUILD BACK.</em></h2>
+        <p className="section-copy">{mobility.description}</p>
+        <ul className="mobility-focus">
+          {mobility.focus.map(item => <li key={item}><Check size={17} aria-hidden="true" />{item}</li>)}
+        </ul>
+        <p className="mobility-scope">{mobility.scope}</p>
+        <a className="button primary" href="#apply" onClick={() => select(mobility.id)}>APPLY FOR REHAB &amp; MOBILITY <ArrowUpRight size={17} /></a>
+      </Reveal>
+    </div>
+  </section>
+}
+
 function Process() {
   return <section className="section process" id="process" tabIndex={-1}><div className="wrap">
     <Reveal><p className="eyebrow">HOW IT WORKS</p><h2>FROM APPLICATION<br />TO <em>PROGRESS.</em></h2></Reveal>
@@ -177,7 +196,7 @@ function App() {
         <div><p className="eyebrow">THE {site.brand.toUpperCase()} PHILOSOPHY</p><h2>NO SHORTCUTS.<br /><em>JUST SMARTER PROGRESS.</em></h2></div>
         <div><p className="section-copy">Good training gives you a reason for every session. {site.brandName} combines smart programming, consistent effort, and sustainable habits to make progress you can measure and keep.</p><a className="text-link" href="#process">SEE HOW IT WORKS <ArrowRight size={16} /></a></div>
       </Reveal></section>
-      <Coaching select={select} /><Process /><About /><Results />
+      <Coaching select={select} /><Mobility select={select} /><Process /><About /><Results />
       <Application selectedService={service} onServiceChange={select} /><FAQ />
       <section className="final-cta"><div className="wrap"><h2>YOUR NEXT CHAPTER<br />STARTS HERE.</h2><a className="button" href="#apply">APPLY FOR COACHING <ArrowUpRight size={17} /></a></div></section>
     </main>

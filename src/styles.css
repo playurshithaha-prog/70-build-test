@@ -93,6 +93,16 @@ h1 span { color: var(--lime); }
 .service-content .service-price { color: var(--paper); }
 .service-content .text-link { margin-top: auto; }
 
+.mobility { background: #131512; border-block: 1px solid var(--line); }
+.mobility-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(35px, 7vw, 100px); align-items: center; }
+.mobility-photo { aspect-ratio: 1.08; border: 1px solid var(--line); }
+.mobility-photo img { object-position: center; }
+.mobility .section-copy { margin-top: 20px; }
+.mobility-focus { display: grid; gap: 10px; list-style: none; padding: 0; margin: 22px 0 15px; }
+.mobility-focus li { display: flex; align-items: flex-start; gap: 9px; font-size: 14px; }
+.mobility-focus svg { color: var(--lime); flex-shrink: 0; margin-top: 2px; }
+.mobility-scope { max-width: 390px; font-size: 12px; line-height: 1.65; color: var(--muted); margin-bottom: 22px; }
+
 .process, .faq { background: #171916; }
 .timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0; margin: 39px 0 0; list-style: none; border-top: 1px solid #545b42; }
 .timeline li { padding: 22px 20px 0; border-left: 1px solid var(--line); }
@@ -177,7 +187,8 @@ details p { margin: 0 25px 18px 0; }
   .hero-kicker { margin-bottom: 15px; }
   .hero-copy { margin-block: 20px; font-size: 14px; }
   .scroll-link { bottom: 16px; }
-  .philosophy-grid, .section-heading, .about-grid, .faq-grid, .application-grid { grid-template-columns: 1fr; gap: 22px; }
+  .philosophy-grid, .section-heading, .about-grid, .faq-grid, .application-grid, .mobility-grid { grid-template-columns: 1fr; gap: 22px; }
+  .mobility-photo { order: 1; max-height: 360px; }
   .about-grid .coach-placeholder, .about-grid .coach-photo { order: 1; max-height: 350px; }
   .service-grid { grid-template-columns: 1fr; }
   .service-content { padding: 19px; }

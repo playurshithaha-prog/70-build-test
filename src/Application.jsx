@@ -6,10 +6,10 @@ const fields = [
   { name: 'Full name', id: 'name', type: 'text', autocomplete: 'name', placeholder: 'Your name' },
   { name: 'Email', id: 'email', type: 'email', autocomplete: 'email', placeholder: 'you@example.com' },
   { name: 'Age', id: 'age', type: 'number', optional: true, placeholder: 'Optional', min: 1, max: 120 },
-  { name: 'Primary fitness goal', id: 'goal', options: ['Build muscle', 'Lose fat', 'Body recomposition', 'Build strength', 'Improve fitness', 'Other'] },
+  { name: 'Primary fitness goal', id: 'goal', options: ['Build muscle', 'Lose fat', 'Body recomposition', 'Build strength', 'Improve fitness', 'Improve mobility', 'Return to training', 'Other'] },
   { name: 'Training experience', id: 'experience', options: ['New to training', 'Less than one year', 'One to three years', 'More than three years'] },
   { name: 'Training environment', id: 'environment', options: ['Gym', 'Home', 'Both'] },
-  { name: 'Preferred coaching service', id: 'service', options: site.services.map(service => [service.id, service.name]).concat([['unsure', 'Help me choose']]) },
+  { name: 'Preferred coaching service', id: 'service', options: [...site.services, site.mobility].map(service => [service.id, service.name]).concat([['unsure', 'Help me choose']]) },
   { name: 'Additional message', id: 'message', optional: true, placeholder: 'Tell me a little about your goals or schedule.' },
 ]
 
