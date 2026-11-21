@@ -1,7 +1,7 @@
 // Change the brand and tagline here. Update the search and sharing text in index.html too.
 export const site = {
-  brand: 'FORMA',
-  brandName: 'FORMA Coaching',
+  brand: '70COACH',
+  brandName: '70COACH',
   tagline: 'BUILD STRENGTH. OWN YOUR PROGRESS.',
   // Use international digits only, including the country code. Leave blank until verified.
   whatsapp: '',

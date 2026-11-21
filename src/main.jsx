@@ -19,7 +19,7 @@ const steps = [
 
 function Wordmark() {
   return <a className="wordmark" href="#home" aria-label={`${site.brandName} home`}>
-    <svg aria-hidden="true" width="25" height="25" viewBox="0 0 32 32"><path fill="currentColor" d="M9 4h23l-2 6H15l-2 5h13l-2 6H11L7 30H0z" /></svg>
+    <svg aria-hidden="true" width="25" height="25" viewBox="0 0 32 32"><path fill="currentColor" d="M4 5h25l-2 6L12 28H4l16-17H2z" /></svg>
     {site.brand}<span>.</span>
   </a>
 }
@@ -174,8 +174,8 @@ function App() {
     <main id="main" tabIndex={-1}>
       <Hero />
       <section className="section philosophy" id="philosophy"><Reveal className="wrap philosophy-grid">
-        <div><p className="eyebrow">THE FORMA PHILOSOPHY</p><h2>NO SHORTCUTS.<br /><em>JUST SMARTER PROGRESS.</em></h2></div>
-        <div><p className="section-copy">Good training gives you a reason for every session. FORMA combines smart programming, consistent effort, and sustainable habits to make progress you can measure and keep.</p><a className="text-link" href="#process">SEE HOW IT WORKS <ArrowRight size={16} /></a></div>
+        <div><p className="eyebrow">THE {site.brand.toUpperCase()} PHILOSOPHY</p><h2>NO SHORTCUTS.<br /><em>JUST SMARTER PROGRESS.</em></h2></div>
+        <div><p className="section-copy">Good training gives you a reason for every session. {site.brandName} combines smart programming, consistent effort, and sustainable habits to make progress you can measure and keep.</p><a className="text-link" href="#process">SEE HOW IT WORKS <ArrowRight size={16} /></a></div>
       </Reveal></section>
       <Coaching select={select} /><Process /><About /><Results />
       <Application selectedService={service} onServiceChange={select} /><FAQ />

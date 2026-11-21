@@ -1,4 +1,4 @@
-# FORMA Coaching
+# 70COACH
 
 A responsive online fitness coaching website built with React, Vite, Tailwind CSS, Lucide, and Motion for React.
 
@@ -32,7 +32,7 @@ The production build is in `dist`.
 - Edit [src/site.js](src/site.js) for the brand, tagline, coach biography, qualifications, specialties, coaching services, prices, FAQs, approved client stories, and contact information.
 - Add a verified WhatsApp number as international digits, including the country code. Leave the field blank until the number is ready. Add an Instagram URL and email address in the same file to enable those footer links.
 - Replace the illustrative photographs under `public/images` with your own photos or update the image paths in the settings file. The hero uses a separate mobile crop. Provide meaningful alt text for replacements. The included images are generated illustrations and do not depict the actual coach or clients.
-- Update [index.html](index.html) for the browser title, search description, and Open Graph fields. Replace [public/forma.svg](public/forma.svg) for the favicon.
+- Update [index.html](index.html) for the browser title, search description, and Open Graph fields. Replace [public/70coach.svg](public/70coach.svg) for the favicon.
 
 ## Application privacy
 

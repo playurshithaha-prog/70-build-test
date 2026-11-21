@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-forma-lime: #d7f865;
+  --color-coach-lime: #d7f865;
 }
 
 :root {
@@ -10,7 +10,7 @@
   --paper: #f2f2eb;
   --muted: #aaaDA4;
   --line: #30332e;
-  --lime: var(--color-forma-lime);
+  --lime: var(--color-coach-lime);
   --display: "Barlow Condensed", "Arial Narrow", sans-serif;
   font-family: "Inter Variable", sans-serif;
   background: var(--ink);
