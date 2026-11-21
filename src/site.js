@@ -4,7 +4,7 @@ export const site = {
   brandName: '70COACH',
   tagline: 'BUILD STRENGTH. OWN YOUR PROGRESS.',
   // Use international digits only, including the country code. Leave blank until verified.
-  whatsapp: '212605324400',
+  whatsapp: '212707539499',
   instagram: '',
   email: '',
   // Image files live in public/images. Replace the matching alt description with each photo.
